@@ -9,15 +9,17 @@ software development process: Test Driven Development.
 
 Django has a list of test cases classes to use, and supports running tests much better than it used to,
 but still, if you want to write a functional test that access the database, and you also want to leave
-the database cleaning process to Django, the default TestCase class will take care of all that for you, but
-not without a cost. For the TDD process of writing tests, the cost added by the default TestCase is too high
+the database cleaning process to Django, the default TestCase class will take care of all that for you. But
+not without a cost.
+
+For the TDD process of writing tests, the cost added by the default TestCase is too high
 to bare. Django's TestCase wraps every single test on a suite with a transaction, so every test has a clean
 environment to be run in.
 
-A clean environment for every test is indeed a good thing to have, if you don't cleanup your DB after your
+A clean environment for every test is indeed a good thing to have. If you don't cleanup your DB after your
 tests, you'll endup with impredictable results, which we should avoid as much as we can on a testing environment.
 
-The transaction wrapping solution that Django uses is for cleanup is not good enough because it's *very* slow.
+The transaction wrapping solution that Django uses for cleanup is not good enough because it's **very** slow.
 You can see it with your own eyes, use this steps to reproduce:
 
     - write a test that uses the database, do no cleanup by yourself and inherit from django.test.TestCase
@@ -31,7 +33,7 @@ TODO: actually perform the above steps and show results (results must be reprodu
 
 You now know why we need a better cleanup solution.
 
-##Why don't we do our cleanup on the our own TestCase implementation?
+##Why don't we do the cleanup on our own TestCase implementation?
 
 One could simply extend unittest.TestCase and add an attribute to keep all objects
 that were added on a test case and remove then manually, one by one, right?
