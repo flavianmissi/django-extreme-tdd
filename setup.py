@@ -1,4 +1,5 @@
-"""A setuptools based setup module.
+"""
+A setuptools based setup module.
 See:
 https://packaging.python.org/en/latest/distributing.html
 https://github.com/pypa/sampleproject
@@ -49,7 +50,7 @@ setup(
         # 'Programming Language :: Python :: 3.4',
     ],
 
-    keywords='testing tdd development',
+    keywords='testing tdd development django',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
