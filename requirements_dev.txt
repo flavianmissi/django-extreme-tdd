@@ -1,0 +1,6 @@
+-r requirements_test.txt
+mkdocs
+ipdb
+ipython
+twine==1.5.0
+wheel
