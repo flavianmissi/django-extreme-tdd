@@ -6,3 +6,6 @@ upload: build_cleanup
 
 build_cleanup:
 	@rm -rf dist
+
+clean:
+	@find . -name *.pyc -delete
