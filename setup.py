@@ -37,7 +37,7 @@ setup(
         'Development Status :: 3 - Alpha',
 
         'Intended Audience :: Developers',
-        'Topic :: Software Development :: Testing Tools',
+        'Topic :: Software Development :: Testing',
 
         'License :: OSI Approved :: BSD License',
 
