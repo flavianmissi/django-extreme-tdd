@@ -22,7 +22,7 @@ def truncate_tables():
 
 
 def _collect_apps():
-    return [get_app(app_name) for app_name in settings.LOCAL_APPS]
+    return [get_app(app_name.split(".")[-1]) for app_name in settings.LOCAL_APPS]
 
 
 def _collect_model_tables(app):
