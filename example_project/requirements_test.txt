@@ -1,2 +1,4 @@
+-r requirements.txt
+
 factory-boy==2.5.1
 django-extreme-tdd==0.1.0
