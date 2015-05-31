@@ -30,9 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-LOCAL_APPS = (
-    'example_project.posts',
-)
+LOCAL_APPS = ('example_project.posts',)
 
 INSTALLED_APPS = (
     'django.contrib.admin',
