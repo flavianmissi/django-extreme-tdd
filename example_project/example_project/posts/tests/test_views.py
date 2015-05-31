@@ -17,6 +17,8 @@ class PostDetailsTests(TestCase):
         cls.unpub_post = UnpublishedPostFactory()
 
     def setUp(self):
+        # self.post = PublishedPostFactory()
+        # self.unpub_post = UnpublishedPostFactory()
         self.view = PostDetails.as_view()
         self.factory = RequestFactory()
         self.request = self.factory.get("fake/uri")
@@ -34,3 +36,12 @@ class PostDetailsTests(TestCase):
         self.request.user = self.unpub_post.author
         response = self.view(self.request, pk=self.unpub_post.id)
         self.assertEqual(200, response.status_code)
+
+    def test_one_more_to_make_a_better_point(self):
+        self.assertTrue(True)
+
+    def test_another_one_to_make_a_better_point(self):
+        self.assertTrue(True)
+
+    def test_yet_another_one_to_make_a_better_point(self):
+        self.assertTrue(True)
