@@ -24,6 +24,10 @@ Just inherit from `extreme.TestCase` instead of `django.test.TestCase`.
 
 ## Contributing
 
+### Install development dependencies (automatically install testing dependencies as well)
+
+    $ pip install -r requirements_dev.txt
+
 ### Running tests
 
     $ nosetests
