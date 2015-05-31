@@ -1,5 +1,10 @@
 """
 Available TestCase implementations.
+
+Only use this test case if you are under Django 1.8.
+It is not recommended for Django 1.8 because they fixed the issue their TestCase
+had with writing in the database on the setUpClass and TearDownClass, which
+finally makes things really faster on that version :)
 """
 from django.test import TransactionTestCase
 from .cleanup import truncate_tables
